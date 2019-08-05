@@ -1,4 +1,3 @@
-import SquareReaderSDK
 import CoreLocation
 import AVKit
 
