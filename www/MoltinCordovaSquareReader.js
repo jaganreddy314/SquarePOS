@@ -13,6 +13,10 @@ MoltinCordovaSquareReader.prototype.startCheckout = function (params, successCal
   cordova.exec(successCallback, errorCallback, "MoltinCordovaSquareReader", "startCheckout", [params]);
 };
 
+MoltinCordovaSquareReader.prototype.startTransaction = function (params, successCallback, errorCallback) {
+  cordova.exec(successCallback, errorCallback, "MoltinCordovaSquareReader", "startTransaction", [params]);
+};
+
 MoltinCordovaSquareReader.prototype.pairCardReaders = function (successCallback, errorCallback) {
   cordova.exec(successCallback, errorCallback, "MoltinCordovaSquareReader", "pairCardReaders", []);
 };

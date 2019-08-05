@@ -175,4 +175,17 @@ import AVKit
         self.commandDelegate.send(CDVPluginResult(status: CDVCommandStatus_ERROR, messageAs: error.localizedDescription), callbackId: currentCommand.callbackId)
         self.currentCommand = nil
     }
+
+    @objc(startTransaction:)
+    func startTransaction( command: CDVInvokedUrlCommand) {
+        print("Reader settings flow presented.");
+        guard let commandParams = command.arguments.first as? [String: Any],
+            let amount = commandParams["amount"] as? Int else {
+                            self.commandDelegate.send(CDVPluginResult(status: CDVCommandStatus_ERROR, messageAs: "No parameters"), callbackId: command.callbackId)
+                            return
+                        }
+        print("Amounbt passsed : ", amount);
+    }
+
+
 }
